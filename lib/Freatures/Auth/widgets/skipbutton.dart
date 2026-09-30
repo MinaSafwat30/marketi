@@ -2,16 +2,15 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class SkipButton extends StatelessWidget {
-  const SkipButton({super.key});
+  final void Function() OnTap ;
+  const SkipButton({super.key, required this.OnTap});
 
   @override
   Widget build(BuildContext context) {
     return InkWell(
       splashColor: Colors.transparent,
       highlightColor: Colors.transparent,
-      onTap: () {
-        // Handle skip button tap 
-      },
+      onTap: OnTap,
               child: Container(
                 decoration: BoxDecoration(
                   color: Colors.white,

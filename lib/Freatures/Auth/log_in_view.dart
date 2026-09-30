@@ -4,6 +4,7 @@ import 'package:marketi/Colors.dart';
 import 'package:marketi/Freatures/Auth/sign_up_view.dart';
 import 'package:marketi/Freatures/Auth/widgets/skipbutton.dart';
 import 'package:marketi/Freatures/Auth/widgets/customTextFormField.dart';
+import 'package:marketi/Freatures/Home/home_view.dart';
 import 'package:marketi/Freatures/Widgets/CustomButton.dart';
 
 class LogInView extends StatelessWidget {
@@ -22,7 +23,11 @@ class LogInView extends StatelessWidget {
               SizedBox(
                 height: 58.h,
               ),
-              SkipButton(),
+              SkipButton(
+                OnTap: () {
+                  Navigator.push(context, MaterialPageRoute(builder: (context) => HomeView()),);
+                },
+              ),
               Column(
                 mainAxisAlignment: MainAxisAlignment.center,
                 crossAxisAlignment: CrossAxisAlignment.center,
